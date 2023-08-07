@@ -1,89 +1,233 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Flip Cards
-  </title>
-  <link rel="stylesheet" href="css.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Secondary Source Flip Cards</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h1 {
+        margin:10px;
+        font-size: 3rem;
+    }
+
+    h2 {
+        margin:10px;
+        font-size: 2rem;
+    }
+
+    h3 {
+      font-size: 1.75rem;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    li {
+      font-size: 1.25rem;
+      padding-right: 3px;
+    }
+
+    .flip-card {
+      background-color: transparent;
+      width: 300px;
+      height: 180px;
+      perspective: 1000px;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+
+    .flip-card-front {
+      background-color: #FFF9D9;
+      color: black;
+    }
+
+    .flip-card-back {
+      background-color: #C8102E;
+      color: white;
+      transform: rotateY(180deg);
+      text-align: left;
+      display: flex;
+      align-items: center;
+    }
+
+    .flex-container {
+      display: flex;
+      background-color: white;
+      flex-wrap: wrap;
+    }
+
+    .flex-container>div {
+      background-color: #888B8D;
+      margin: 10px;
+      padding: 10px;
+    }
+  </style>
 </head>
 
 <body>
+  <main>
+    <h1>Secondary Source Flip Cards</h1>
+    <h2>Secondary Sources For Getting Started</h2>
 
-  <div class="flex-container">
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <p>Tort</p>
+    <div class="flex-container">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>Encyclopedias</h3>
+            </div>
+            <div class="flip-card-back">
+              <ul>
+                <li>Lorem</li>
+                <li>Ipsem</li>
+                <li>Lorem</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="flip-card-back">
-          <p>A Tasty Treat</p>
-        </div>
-      </div>
-    </div>
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <p>Duty</p>
-        </div>
-        <div class="flip-card-back">
-          <p>Poop</p>
-        </div>
-      </div>
-    </div>
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <p>Force Majeure</p>
-        </div>
-        <div class="flip-card-back">
-          <p>Yer Mum</p>
-        </div>
-      </div>
-    </div>
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <p>Void</p>
-        </div>
-        <div class="flip-card-back">
-          <p>Is staring at you</p>
-        </div>
-      </div>
-    </div>
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <p>Waiver</p>
-        </div>
-        <div class="flip-card-back">
-          <p>The ocean</p>
-        </div>
-      </div>
-    </div>
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <p>The Rule of Capture</p>
-        </div>
-        <div class="flip-card-back">
-          <p>I drink your milkshake</p>
-        </div>
-      </div>
-    </div>
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <p>Don't do this one</p>
-        </div>
-        <div class="flip-card-back">
-          <p><img src="rollin.jpeg" width="25%" height="25%"></p>
-        </div>
-      </div>
-    </div>
-  </div>
 
-</div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>Dictionaries</h3>
+            </div>
+            <div class="flip-card-back">
+              <ul>
+                <li>lorem</li>
+                <li>ipsem</li>
+                <li>lorem</li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-</body>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>Treatises</h3>
+            </div>
+            <div class="flip-card-back">
+              <ul>
+                <li>lorem</li>
+                <li>ipsem</li>
+                <li>lorem</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        </div>
+
+    <h2>Specialized Secondary Sources</h2>
+
+      <div class="flex-container">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>Law Reviews</h3>
+            </div>
+            <div class="flip-card-back">
+              <ul>
+                <li>Novel ideas</li>
+                <li>Never updated</li>
+                <li>Current developments</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>American Law Reports</h3>
+            </div>
+            <div class="flip-card-back">
+              <ul>
+                <li>Narrow points of law</li>
+                <li>Not jurisdiction specific</li>
+                <li>Updated regularly</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>Restatements</h3>
+            </div>
+            <div class="flip-card-back">
+              <ul>
+                <li>What the law "should be"</li>
+                <li>Written by experts</li>
+                <li>Indicates trends in common law</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>Form Books</h3>
+            </div>
+            <div class="flip-card-back">
+              <ul>
+                <li>Used to guide drafting</li>
+                <li>sample documents</li>
+                <li>May or may not be updated</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>Practice Guides</h3>
+            </div>
+            <div class="flip-card-back">
+              <ul>
+                <li>Procedural information</li>
+                <li>May include checklists</li>
+                <li>Created for practitioners</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </main>
+  <script src="index.js"></script>
+
 
 </html>
